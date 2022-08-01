@@ -1,0 +1,86 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background-image:url(images/students.jpeg);
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    background:#4682B4;
+    width:100%;
+    box-sizing: border-box;
+}
+.logo{
+    color:#fff;
+    height:50px;
+    line-height:50px;
+    font-size:24px;
+    float:left;
+    font-weight:bold;
+}
+nav{
+    float:right;
+}
+ul{
+    margin:0;
+    padding:0;
+    display:flex;
+}
+li{
+    list-style: none;
+}
+a{
+    height:50px;
+    line-height:50px;
+    padding:0 20px;
+    color:#fff;
+    text-decoration:none;  
+    display:block;
+}
+a:hover, .active{
+    color:#fff;
+    background:	#87CEEB;
+}
+.menu-toggle{
+    color:#fff;
+    float:right;
+    line-height:50px;
+    font-size:24px;
+    cursor:pointer;
+    display:none;
+}
+@media (max-width:991px){
+    header{
+        padding:0 20px;
+    }
+    .menu-toggle{
+        display:block;
+    }
+    nav{
+       
+        width:100%;
+        position:absolute;
+        height:cal(100vh - 50px);
+        background:#008B8B;
+        top:50px;
+        left:-100%;
+        transition: 0.5s;
+    }
+    nav.active{
+        left:0;
+    }
+    ul{
+        display:block;
+        text-align:center;
+    }
+    li a {
+        border: 0.5px solid rgb(128, 128, 128);
+    }
+
+}
